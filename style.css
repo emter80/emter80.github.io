@@ -401,8 +401,8 @@ body {
 /* ---------- About me and skill cards: green side bar like the K3s Lab card (replaces the top border) ---------- */
 .bio-text, .panel { border-left: 3px solid var(--accent); }
 .panel { border-top: 0; }
-.panel:hover { border-top-color: transparent; border-left-color: var(--gold); }
+.panel:hover { border-top-color: transparent; border-left-color: var(--gold); border-bottom-color: var(--gold); }
 
-/* ---------- cards with a green side bar also get a thin bottom line (1px = a third of the 3px bar) ---------- */
-.bio-text, .panel, .job.current, .job.fold[open] { border-bottom: 1px solid var(--accent); }
+/* ---------- cards with a green side bar also get a thin bottom line (0.75px = a quarter of the 3px bar) ---------- */
+.bio-text, .panel, .job.current, .job.fold[open] { border-bottom: .75px solid var(--accent); }
 .job.fold.current:not([open]) { border-bottom: 0; }   /* collapsed: grey side bar, no green line */
