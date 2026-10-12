@@ -122,9 +122,16 @@
 
   function wake() { if (!raf) raf = requestAnimationFrame(frame); }
 
+  // touch screens: same static mesh, no pointer reaction
+  const canHover = matchMedia('(hover: hover) and (pointer: fine)').matches;
+
   build();
-  addEventListener('resize', build);
-  if (!reduce) {
+  // on phones the address bar showing/hiding fires resize; only rebuild when the width changes
+  let lastW = innerWidth;
+  addEventListener('resize', () => {
+    if (canHover || innerWidth !== lastW) { lastW = innerWidth; build(); }
+  });
+  if (!reduce && canHover) {
     addEventListener('pointermove', (e) => { mouse.x = e.clientX; mouse.y = e.clientY; wake(); }, { passive: true });
     document.addEventListener('pointerleave', () => { mouse.x = mouse.y = -9999; wake(); });
   }
