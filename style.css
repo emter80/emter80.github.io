@@ -402,3 +402,7 @@ body {
 .bio-text, .panel { border-left: 3px solid var(--accent); }
 .panel { border-top: 0; }
 .panel:hover { border-top-color: transparent; border-left-color: var(--gold); }
+
+/* ---------- cards with a green side bar also get a thin bottom line (1px = a third of the 3px bar) ---------- */
+.bio-text, .panel, .job.current, .job.fold[open] { border-bottom: 1px solid var(--accent); }
+.job.fold.current:not([open]) { border-bottom: 0; }   /* collapsed: grey side bar, no green line */
