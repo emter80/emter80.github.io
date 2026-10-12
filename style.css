@@ -327,3 +327,9 @@ h1 {
 @media (prefers-reduced-motion: reduce) {
   .top nav a:not(.brand)::after { transition: none; }
 }
+/* ---------- top menu: green dot before each link ---------- */
+.top nav a:not(.brand)::before {
+  content: ""; display: inline-block; width: 7px; height: 7px; margin-right: 8px;
+  border-radius: 50%; background: var(--accent); vertical-align: middle;
+  position: relative; top: -1px;
+}
