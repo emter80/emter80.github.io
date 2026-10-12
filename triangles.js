@@ -122,14 +122,17 @@
 
   function wake() { if (!raf) raf = requestAnimationFrame(frame); }
 
-  // touch screens: same static mesh, no pointer reaction
-  const canHover = matchMedia('(hover: hover) and (pointer: fine)').matches;
+  // phones: same static mesh, no pointer reaction. Mice and tablets keep the motion
+  // (shortest screen side >= 600px tells a tablet from a phone, in either orientation).
+  const isPhone = matchMedia('(hover: none)').matches && Math.min(screen.width, screen.height) < 600;
+  const canHover = !isPhone;
+  const touchOnly = matchMedia('(hover: none)').matches;
 
   build();
-  // on phones the address bar showing/hiding fires resize; only rebuild when the width changes
+  // on touch devices the address bar showing/hiding fires resize; only rebuild when the width changes
   let lastW = innerWidth;
   addEventListener('resize', () => {
-    if (canHover || innerWidth !== lastW) { lastW = innerWidth; build(); }
+    if (!touchOnly || innerWidth !== lastW) { lastW = innerWidth; build(); }
   });
   if (!reduce && canHover) {
     addEventListener('pointermove', (e) => { mouse.x = e.clientX; mouse.y = e.clientY; wake(); }, { passive: true });
