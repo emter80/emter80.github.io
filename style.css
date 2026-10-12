@@ -378,3 +378,6 @@ h1 {
 @media (prefers-reduced-motion: reduce) {
   .menu-toggle span, .menu-toggle span::before, .menu-toggle span::after { transition: none; }
 }
+
+/* ---------- collapsed role (even the current one) shows the grey side bar; green only while open ---------- */
+.job.fold.current:not([open]) { border-left-color: #2A342E; }
