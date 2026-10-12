@@ -16,15 +16,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 
   <!-- Background: emerald triangle mesh that reacts gently to the pointer (see triangles.js) -->
   <canvas id="tri" aria-hidden="true"></canvas>
 
-  <header class="top">
-    <nav aria-label="Sections">
+  <header class="top" id="top-bar">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><span></span></button>
+    <nav id="site-nav" aria-label="Sections">
       <a class="brand" href="#top" aria-label="Mariusz Terlecki, back to top"><img class="brand-logo" src="logo.svg" alt="" width="55" height="30"></a>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
@@ -285,6 +286,20 @@
     <span>© Mariusz Terlecki</span>
   </footer>
 
+  <script>
+    (function () {
+      var bar = document.getElementById('top-bar');
+      var btn = bar.querySelector('.menu-toggle');
+      function set(open) {
+        bar.classList.toggle('open', open);
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      }
+      btn.addEventListener('click', function () { set(!bar.classList.contains('open')); });
+      bar.addEventListener('click', function (e) { if (e.target.closest('nav a')) set(false); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
+      window.addEventListener('resize', function () { if (window.innerWidth > 820) set(false); });
+    })();
+  </script>
   <script src="triangles.js"></script>
 
 </body>
