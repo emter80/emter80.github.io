@@ -406,3 +406,7 @@ body {
 /* ---------- cards with a green side bar also get a thin bottom line (0.75px = a quarter of the 3px bar) ---------- */
 .bio-text, .panel, .job.current, .job.fold[open] { border-bottom: .75px solid var(--accent); }
 .job.fold.current:not([open]) { border-bottom: 0; }   /* collapsed: grey side bar, no green line */
+
+/* ---------- side bar 4px, bottom line 1px (a quarter of it) ---------- */
+.bio-text, .panel, .job { border-left-width: 4px; }
+.bio-text, .panel, .job.current, .job.fold[open] { border-bottom-width: 1px; }
