@@ -397,3 +397,8 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .section-head h2::after { transition: none; }
 }
+
+/* ---------- About me and skill cards: green side bar like the K3s Lab card (replaces the top border) ---------- */
+.bio-text, .panel { border-left: 3px solid var(--accent); }
+.panel { border-top: 0; }
+.panel:hover { border-top-color: transparent; border-left-color: var(--gold); }
