@@ -385,8 +385,8 @@ h1 {
 /* ---------- soft background gradient under the triangle mesh ---------- */
 body {
   background:
-    radial-gradient(ellipse 80% 60% at 15% 0%, rgba(16, 185, 129, .13), transparent 70%),
-    radial-gradient(ellipse 80% 60% at 85% 100%, rgba(16, 185, 129, .13), transparent 70%),
+    radial-gradient(ellipse 80% 60% at 15% 0%, rgba(16, 185, 129, .08), transparent 70%),
+    radial-gradient(ellipse 80% 60% at 85% 100%, rgba(16, 185, 129, .08), transparent 70%),
     linear-gradient(180deg, #0F1210 0%, #121A15 100%);
   background-color: var(--bg);
   background-attachment: fixed;
