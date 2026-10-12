@@ -1,0 +1,291 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mariusz Terlecki — Oracle Infrastructure &amp; DevOps</title>
+  <meta name="description" content="Mariusz Terlecki: Senior Platform &amp; Infrastructure Engineer. 22+ years in IT, enterprise Oracle platforms, DevOps &amp; automation, Azure.">
+  <!-- Link preview on LinkedIn (replace the URLs after deployment) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mariusz Terlecki — Oracle Infrastructure &amp; DevOps">
+  <meta property="og:description" content="Senior Platform &amp; Infrastructure Engineer. 22+ years in IT, enterprise Oracle platforms, DevOps &amp; automation, Azure.">
+  <meta property="og:url" content="https://YOUR-DOMAIN.com/">
+  <meta property="og:image" content="https://YOUR-DOMAIN.com/og.png">
+  <meta name="theme-color" content="#0F1210">
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background: emerald triangle mesh that reacts gently to the pointer (see triangles.js) -->
+  <canvas id="tri" aria-hidden="true"></canvas>
+
+  <header class="top">
+    <nav aria-label="Sections">
+      <a class="brand" href="#top" aria-label="Mariusz Terlecki, back to top"><img class="brand-logo" src="logo.svg" alt="" width="55" height="30"></a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#lab">Lab</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <p class="eyebrow">Available for new challenges</p>
+      <h1>Mariusz Terlecki</h1>
+      <p class="headline">Senior Software Consultant · Oracle Infrastructure · DevOps &amp; Automation · Azure · Platform Engineering</p>
+      <div class="actions">
+        <a class="btn" href="https://www.linkedin.com/in/mariusz-terlecki-00b9b62" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn ghost" href="#contact">Get in touch</a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <header class="section-head">
+        <p class="label">Biography</p>
+        <h2>Who am I?</h2>
+        <span class="rule" aria-hidden="true"></span>
+      </header>
+
+      <div class="bio">
+
+        <div class="bio-text">
+          <p class="kicker">About me</p>
+          <p class="muted">Senior Platform &amp; Infrastructure Engineer with DevOps expertise. 22+ years of IT experience, including 16+ years designing, automating and operating enterprise Oracle database platforms across banking and technology (UBS, Credit Suisse, IBM). I combine deep Oracle expertise with modern DevOps practice: Infrastructure as Code, CI/CD automation and Azure.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <header class="section-head">
+        <p class="label">Toolbox</p>
+        <h2>Skills</h2>
+        <span class="rule" aria-hidden="true"></span>
+      </header>
+
+      <div class="grid">
+        <article class="panel"><h3>Cloud &amp; Azure</h3><p>Azure CLI, KQL, REST API, Key Vault, Load Balancer, Private DNS, Log Analytics, ARM Templates, NSG</p></article>
+        <article class="panel"><h3>Oracle</h3><p>Database, Enterprise Manager (OEM) 13.5, RAC, Grid Infrastructure, Physical Data Guard, upgrade &amp; patch management</p></article>
+        <article class="panel"><h3>Automation &amp; CI/CD</h3><p>GitLab CI/CD, Ansible, Git, YAML, Infrastructure as Code, Terraform (working knowledge)</p></article>
+        <article class="panel"><h3>Linux &amp; scripting</h3><p>RHEL, Oracle Linux, Ubuntu, Debian, custom RPM packaging, Samba, Vagrant, VirtualBox, Multipass · Bash (advanced), Python and PL/SQL (working knowledge)</p></article>
+        <article class="panel"><h3>Monitoring &amp; security</h3><p>OEM metric extensions, templates and target hierarchies, Splunk, Azure Log Analytics, SAML SSO, Syslog, NSG</p></article>
+        <article class="panel"><h3>Containers (home lab)</h3><p>Docker, Kubernetes, K3s, ArgoCD, Helm, Traefik, cert-manager, GitHub OAuth2/OIDC. Personal lab project, no production experience.</p></article>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <header class="section-head">
+        <p class="label">Career</p>
+        <h2>Experience</h2>
+        <span class="rule" aria-hidden="true"></span>
+      </header>
+
+      <div class="jobs">
+
+        <details class="job fold current" open>
+          <summary>
+            <h3>UBS</h3>
+            <span class="role">Infrastructure Engineer – Oracle Database – Director (DI)</span>
+            <span class="meta">October 2024 – August 2026 (1 year 11 months) · Wroclaw, Dolnośląskie, Poland</span>
+          </summary>
+          <ul>
+            <li>Designed and implemented end-to-end GitLab CI/CD pipelines for the entire lifecycle of enterprise Oracle infrastructure estates, integrating Ansible playbooks within the provisioning pipeline to automate OEM Agent installation and target configuration.</li>
+            <li>Architected and deployed a global Oracle Enterprise Manager (OEM) 13.5 infrastructure on Azure IaaS, engineered for HA/DR utilizing Availability Zones, Azure Load Balancers and Private DNS.</li>
+            <li>Implemented highly available storage solutions leveraging Azure Zone-Redundant Storage (ZRS) and cross-zone Samba shares, enforcing strict Network Security Group (NSG) rules for 'Red Zone' environments.</li>
+            <li>Developed automated pipelines for full deployment of OEM Application Servers on Azure (VM provisioning, disk layout, RPM prerequisites and binary installation).</li>
+            <li>Implemented pipeline-driven SAML SSO configurations for enterprise-grade identity management using Azure as the identity provider.</li>
+            <li>Automated OEM audit configurations and externalized logs via Syslog to Azure Log Analytics using Data Collection Rules (DCR).</li>
+            <li><strong>Key achievement:</strong> successfully built a cross-Availability Zone solution with active/active OMS nodes and secured OMR repositories using Active Data Guard (ADG).</li>
+          </ul>
+        </details>
+
+        <details class="job fold">
+          <summary>
+            <h3>Credit Suisse</h3>
+            <span class="role">Oracle Database Engineer · up to Vice President (VP) · 4 roles</span>
+            <span class="meta">October 2012 – September 2024 (12 years) · Wroclaw, Poland</span>
+          </summary>
+          <div class="fold-body">
+          <div class="role-group">
+            <p class="role">Oracle Database Engineer – Vice President (VP)</p>
+            <p class="meta">April 2021 – September 2024 (3 years 6 months) · Wroclaw, Dolnośląskie, Poland</p>
+            <ul>
+              <li><strong>Global monitoring, HA/DR &amp; automation architecture:</strong> personally responsible for engineering, scaling and evolving Credit Suisse's global Oracle Enterprise Manager 13.5 platform, providing highly available monitoring services for approximately 12,000 Oracle databases across development, test, UAT and production environments worldwide.</li>
+              <li><strong>DBaaS evolution &amp; lifecycle upgrades:</strong> directed continuous modernization of the internal Database-as-a-Service (DBaaS) platform, evolving provisioning engines to support successive Oracle Database generations (from 12.1/12.2 up to 19c) via EMCLI.</li>
+              <li><strong>Automated database patching:</strong> engineered a centralized Oracle database patching framework by developing custom RPM packages containing Oracle patches and automated deployment scripts for Single Instance and Active Data Guard databases, enabling standardized patch deployment across an Oracle estate of approximately 12,000 databases through the internal SPUDS platform.</li>
+            </ul>
+          </div>
+
+          <div class="role-group">
+            <p class="role">Oracle Database Engineer – Assistant Vice President (AVP)</p>
+            <p class="meta">April 2016 – April 2021 (5 years 1 month) · Wroclaw, Dolnośląskie, Poland</p>
+            <ul>
+              <li><strong>Custom DBaaS platform engineering:</strong> co-developed and launched the initial version of a custom internal DBaaS platform using custom RPMs and EMCLI to orchestrate database provisioning via OEM.</li>
+              <li>Collaborated with cross-functional infrastructure teams to design monitoring-as-a-service automation, including administration groups, templates and hierarchies.</li>
+              <li>Maintained and enhanced large-scale Oracle Database infrastructure, ensuring high performance, availability and disaster recovery readiness.</li>
+            </ul>
+          </div>
+
+          <div class="role-group">
+            <p class="role">Oracle Database Engineer</p>
+            <p class="meta">December 2013 – March 2016 (2 years 4 months) · Wroclaw, Dolnośląskie, Poland</p>
+            <ul>
+              <li>Provided advanced engineering support for complex Oracle infrastructure, focusing on database reliability, scaling and lifecycle management.</li>
+            </ul>
+          </div>
+
+          <div class="role-group">
+            <p class="role">Oracle Database Administrator</p>
+            <p class="meta">October 2012 – November 2013 (1 year 2 months) · Wroclaw, Poland</p>
+            <ul>
+              <li>Day-to-day administration, troubleshooting and performance tuning of corporate Oracle databases.</li>
+            </ul>
+          </div>
+          </div>
+        </details>
+
+        <details class="job fold">
+          <summary>
+            <h3>IBM Global Services</h3>
+            <span class="role">Senior IT Specialist – Oracle DBA</span>
+            <span class="meta">February 2010 – September 2012 (2 years 8 months)</span>
+          </summary>
+          <ul>
+            <li>Managed Oracle 10g and 11g databases running under Unix (AIX) and Linux (Oracle Enterprise Linux) environments.</li>
+            <li>Administered Oracle Clusterware (11.1), Grid Infrastructure (11.2) and Oracle RAC databases (including distance RAC) alongside physical and logical standby databases.</li>
+            <li>Prepared, tested and executed backup and restore procedures for Oracle databases and Oracle Clusterware; managed Grid Control and patch management (PSU, one-off patches).</li>
+          </ul>
+        </details>
+
+        <details class="job fold">
+          <summary>
+            <h3>Telefonia Dialog</h3>
+            <span class="role">Oracle DBA</span>
+            <span class="meta">June 2008 – January 2010 (1 year 8 months)</span>
+          </summary>
+          <ul>
+            <li>Managed Oracle 9i, 10g and 11g databases under Unix (HP-UX, Solaris) and Linux (Red Hat, Oracle Enterprise Linux) control.</li>
+            <li>Installed and configured Oracle databases (10g, 11g) including Oracle Clusterware and Oracle RAC; prepared and executed backup/restore operations.</li>
+          </ul>
+        </details>
+
+        <details class="job fold">
+          <summary>
+            <h3>WINUEL SA</h3>
+            <span class="role">Systems Engineer</span>
+            <span class="meta">April 2006 – May 2008 (2 years 2 months)</span>
+          </summary>
+          <ul>
+            <li>Managed Oracle 9i and 10g databases under Unix/Linux and Windows control, alongside three-tier applications based on Oracle databases.</li>
+            <li>Provided 2nd line technical support for customers regarding DBA and application administration.</li>
+          </ul>
+        </details>
+
+        <details class="job fold">
+          <summary>
+            <h3>Bank Spoldzielczy w Legnicy</h3>
+            <span class="role">IT Specialist</span>
+            <span class="meta">August 2004 – March 2006 (1 year 8 months)</span>
+          </summary>
+          <ul>
+            <li>Managed core transaction and general ledger systems (DefBank Pro) and e-banking systems under Unix (Solaris) and Linux control.</li>
+            <li>Provided 1st line support for customers and team members; managed the online banking portal.</li>
+          </ul>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- LAB PROJECT -->
+    <section id="lab" class="section">
+      <header class="section-head">
+        <p class="label">Personal project</p>
+        <h2>Kubernetes Lab</h2>
+        <span class="rule" aria-hidden="true"></span>
+      </header>
+
+      <article class="job current lab">
+        <header>
+          <h3>Automated Multi-Node Kubernetes Platform with Terraform, GitOps and K3s</h3>
+          <p class="meta">Non-production environment</p>
+        </header>
+        <p class="muted">A reproducible non-production Kubernetes platform focused on Infrastructure as Code (IaC), Kubernetes lifecycle management, GitOps workflows and cloud-native platform engineering practices.</p>
+
+        <p class="role">Terraform + Canonical Multipass</p>
+        <ul>
+          <li>Automated deployment of multi-node K3s clusters on Ubuntu virtual machines.</li>
+          <li>Kubernetes platform bootstrap and GitOps-based application delivery workflow for the K3s environment.</li>
+          <li>Integrated ArgoCD, ApplicationSets, Helm and declarative Kubernetes configuration.</li>
+        </ul>
+
+        <p class="role">Platform delivery workflow</p>
+        <ul>
+          <li>GitOps-based application delivery using ArgoCD and ApplicationSets.</li>
+          <li>Declarative workload management using Helm and Kubernetes manifests.</li>
+          <li>Kubernetes ingress management with Traefik.</li>
+          <li>Automated TLS certificate lifecycle management using cert-manager and an internal Certificate Authority.</li>
+          <li>Single Sign-On (SSO) for ArgoCD using GitHub OAuth / OIDC authentication with role-based access control (RBAC).</li>
+          <li>Kubernetes platform tooling integration.</li>
+        </ul>
+
+        <p class="meta">Kubernetes · K3s · Terraform · ArgoCD · GitOps · Helm · Kustomize · Traefik · cert-manager · OAuth2 / OIDC · SSO · RBAC · Canonical Multipass · Vagrant · VirtualBox · Linux · IaC</p>
+        <div class="actions">
+          <a class="btn" href="https://github.com/emter80/kubernetes-mate-lab" target="_blank" rel="noopener">View on GitHub</a>
+        </div>
+      </article>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section">
+      <header class="section-head">
+        <p class="label">Background</p>
+        <h2>Education</h2>
+        <span class="rule" aria-hidden="true"></span>
+      </header>
+
+      <article class="job current">
+        <header>
+          <h3>Wroclaw University of Science and Technology</h3>
+          <p class="role">Master of Science in Engineering (MSc)</p>
+          <p class="meta">October 1999 – June 2004</p>
+        </header>
+        <p class="muted">Main field of study: Management and Marketing. Specialty: Business Information Systems.</p>
+      </article>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <header class="section-head">
+        <p class="label">Contact</p>
+        <h2>Let's talk</h2>
+        <span class="rule" aria-hidden="true"></span>
+      </header>
+
+      <div class="actions center">
+        <a class="btn" href="https://www.linkedin.com/in/mariusz-terlecki-00b9b62" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn ghost" href="mailto:emter80@gmail.com">emter80@gmail.com</a>
+        <a class="btn ghost" href="https://github.com/emter80" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <span>© Mariusz Terlecki</span>
+  </footer>
+
+  <script src="triangles.js"></script>
+
+</body>
+</html>
