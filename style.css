@@ -340,3 +340,41 @@ h1 {
   border-radius: 50%; background: var(--accent); vertical-align: middle;
   position: relative; top: -.06em;
 }
+
+/* ---------- phones: hamburger menu, slim sticky bar (logo + button), links drop down ---------- */
+.menu-toggle { display: none; }
+@media (max-width: 820px) {
+  html { scroll-padding-top: 64px; }
+  .top { position: sticky; display: block; min-height: 56px; padding: 0; }
+  .top nav { display: block; padding: 56px 16px 0; overflow: visible; }
+  .top.open nav { padding-bottom: 10px; }
+  .top nav a.brand {
+    position: absolute; top: 0; left: 16px; height: 56px; padding: 0; margin: 0;
+    display: flex; align-items: center; background: none;
+  }
+  .menu-toggle {
+    display: block; position: absolute; top: 0; right: 6px; width: 52px; height: 56px;
+    background: none; border: 0; cursor: pointer; color: var(--text);
+  }
+  .menu-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: -4px; }
+  .menu-toggle span, .menu-toggle span::before, .menu-toggle span::after {
+    display: block; width: 22px; height: 2px; background: currentColor; border-radius: 2px;
+    transition: transform .2s, opacity .2s;
+  }
+  .menu-toggle span { position: relative; margin: 0 auto; }
+  .menu-toggle span::before, .menu-toggle span::after { content: ""; position: absolute; left: 0; }
+  .menu-toggle span::before { top: -7px; }
+  .menu-toggle span::after { top: 7px; }
+  .top.open .menu-toggle span { background: transparent; }
+  .top.open .menu-toggle span::before { transform: translateY(7px) rotate(45deg); }
+  .top.open .menu-toggle span::after { transform: translateY(-7px) rotate(-45deg); }
+  .top nav a:not(.brand) { display: none; }
+  .top.open nav a:not(.brand) {
+    display: block; padding: 14px 4px; font-size: 1.05rem;
+    border-top: 1px solid rgba(255, 255, 255, .07);
+  }
+  .top nav a:not(.brand)::after { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .menu-toggle span, .menu-toggle span::before, .menu-toggle span::after { transition: none; }
+}
