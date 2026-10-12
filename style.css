@@ -59,7 +59,6 @@ h1 { font: 700 clamp(2.4rem, 6vw, 4rem)/1.1 var(--head); color: var(--text); let
 .section-head { text-align: center; margin-bottom: 52px; }
 .label { font: 500 .8rem var(--head); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
 h2 { font: 700 clamp(2rem, 4.4vw, 3rem)/1.15 var(--head); color: var(--text); margin-top: 10px; }
-.rule { display: block; width: 2px; height: 38px; background: var(--accent); margin: 22px auto 0; }
 
 /* ---------- biography ---------- */
 .bio { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 56px; align-items: center; }
@@ -161,7 +160,6 @@ footer { margin-top: 90px; padding: 28px 24px 48px; text-align: center; border-t
 }
 .kicker { color: var(--gold); }
 .headline { color: var(--gold); font-weight: 400; }
-.rule { background: linear-gradient(var(--gold), var(--accent)); }
 .ring { border-color: var(--gold); }
 .panel:hover { border-top-color: var(--gold); }
 
@@ -195,10 +193,8 @@ footer { margin-top: 90px; padding: 28px 24px 48px; text-align: center; border-t
 }
 @media (max-width: 560px) { .bio-text .details { grid-template-columns: 1fr; } }
 
-/* ---------- heading rule: 3x thicker (2px -> 6px) ---------- */
-.rule { width: 6px; }
 
-/* ---------- hero name: same gold -> emerald gradient as the heading rules ---------- */
+/* ---------- hero name: same gold -> emerald gradient ---------- */
 h1 {
   display: block; width: fit-content; margin-left: auto; margin-right: auto;   /* shrink the box to the text so the gradient spans the name only */
   color: var(--gold);                                   /* fallback if background-clip is unsupported */
@@ -388,4 +384,16 @@ body {
     linear-gradient(180deg, #0F1210 0%, #121A15 100%);
   background-color: var(--bg);
   background-attachment: fixed;
+}
+
+/* ---------- section headings: gold underline on hover, like the top menu ---------- */
+.section-head h2 { position: relative; display: inline-block; padding-bottom: 8px; }
+.section-head h2::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3px;
+  background: var(--gold); border-radius: 2px;
+  transform: scaleX(0); transform-origin: left; transition: transform .22s ease;
+}
+.section-head h2:hover::after { transform: scaleX(1); }
+@media (prefers-reduced-motion: reduce) {
+  .section-head h2::after { transition: none; }
 }
