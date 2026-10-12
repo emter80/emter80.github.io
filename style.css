@@ -333,3 +333,10 @@ h1 {
   border-radius: 50%; background: var(--accent); vertical-align: middle;
   position: relative; top: -1px;
 }
+
+/* ---------- section headings: green dot before each title ---------- */
+.section-head h2::before {
+  content: ""; display: inline-block; width: .3em; height: .3em; margin-right: .4em;
+  border-radius: 50%; background: var(--accent); vertical-align: middle;
+  position: relative; top: -.06em;
+}
