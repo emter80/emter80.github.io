@@ -79,7 +79,7 @@ h2 { font: 700 clamp(2rem, 4.4vw, 3rem)/1.15 var(--head); color: var(--text); ma
 .ring { position: absolute; right: -14px; bottom: -14px; width: 34px; height: 34px; border: 2px solid var(--accent); border-radius: 50%; }
 
 .kicker { font: 400 1.15rem var(--sans); color: var(--accent); }
-.bio-text h3 { font: 700 clamp(1.5rem, 3vw, 2rem)/1.25 var(--head); color: var(--text); margin: 8px 0 18px; }
+.bio-text h3 { font: 600 1.05rem/1.25 var(--head); color: var(--text); margin: 8px 0 18px; }
 .muted { color: var(--muted); font-size: .96rem; }
 
 .details { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 28px 0 30px; }
@@ -197,11 +197,18 @@ footer { margin-top: 90px; padding: 28px 24px 48px; text-align: center; border-t
 /* ---------- hero name: same gold -> emerald gradient ---------- */
 h1 {
   display: block; width: fit-content; margin-left: auto; margin-right: auto;   /* shrink the box to the text so the gradient spans the name only */
-  color: var(--gold);                                   /* fallback if background-clip is unsupported */
+  font-family: "Monoton", var(--head);                 /* neon line-style display face; Monoton ships a single weight (400) */
+  font-weight: 400; letter-spacing: .04em;
+  color: var(--gold);                                  /* fallback if background-clip is unsupported */
   background: linear-gradient(90deg, var(--gold), var(--accent));
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
+  /* drop-shadow (not text-shadow): text-shadow would show through the transparent gradient text */
+  /* black shadow first, emerald glow after it: the glow is applied to the shadow too, so the dark shape reads against it */
+  filter: drop-shadow(6px 7px 3px #000)
+          drop-shadow(0 10px 8px rgba(0, 0, 0, 1))
+          drop-shadow(0 0 22px rgba(16, 185, 129, .55));
 }
 
 /* ---------- hero stacking: status line and name are always on separate lines ---------- */
@@ -305,6 +312,31 @@ h1 {
 
 /* ---------- side-by-side triangle logo is wide: fix the height, let the width follow ---------- */
 .brand-logo { width: auto; height: 30px; }
+
+/* ---------- name under MATE, flanked by thin gold rules ---------- */
+.hero .person {
+  margin: 14px 0 0; text-align: center;
+  font: 500 .95rem var(--head); letter-spacing: .34em; text-transform: uppercase;
+  color: var(--text); opacity: .92;
+}
+.hero .person::before, .hero .person::after {
+  content: ""; display: inline-block; width: 38px; height: 1px; background: var(--gold);
+  vertical-align: middle; margin: 0 14px;
+}
+@media (max-width: 480px) {
+  .hero .person { font-size: .8rem; letter-spacing: .24em; }
+  .hero .person::before, .hero .person::after { width: 20px; margin: 0 10px; }
+}
+
+/* ---------- logo is now the letter M in Monoton, same gold -> emerald gradient as the hero name ---------- */
+.brand-logo.brand-m {
+  height: auto; width: auto; line-height: 1; padding: 2px 0;
+  font: 400 2rem/1 "Monoton", var(--head); letter-spacing: 0;
+  background: linear-gradient(90deg, var(--gold), var(--accent));
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 
 /* ---------- top menu: gold underline on hover / keyboard focus ---------- */
